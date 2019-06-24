@@ -3,6 +3,22 @@ app = Client("820706559:AAEmDj6Rn61OC7SjWx77jqnki_IO8KNqBmA",814511,"44462f0f278
 bullet = -1001378725482
 ferrari = -1001274887387 
 
+@app.on_message(Filters.chat(ferrari) & ~ Filters.edited)
+def main(client, message):
+ file = open("ferrari.txt" , "r")
+ lines = file.readlines()
+ file.close()
+ for line in lines:
+  p = line.split()
+  for r in p: 
+    mes = client.send_message( int(r), "**" + message.text + "**" )
+    fille = open(str(r)+".txt","r")
+    n = fille.readlines()
+    fille.close()
+    for t in n:
+     fie = open(str(r)+".txt","w")
+     fie.write(t +" " + str(message.message_id) + " " + str(mes.message_id))
+     fie.close()
 
 
 @app.on_message(Filters.chat(bullet) & ~ Filters.edited)
@@ -24,23 +40,6 @@ def main(client, message):
 
  
 
-@app.on_message(Filters.chat(ferrari) & ~ Filters.edited)
-def main(client, message):
- file = open("ferrari.txt" , "r")
- lines = file.readlines()
- file.close()
- for line in lines:
-  p = line.split()
-  for r in p: 
-    mes = client.send_message( int(r), "**" + message.text + "**" )
-    fille = open(str(r)+".txt","r")
-    n = fille.readlines()
-    fille.close()
-    for t in n:
-     fie = open(str(r)+".txt","w")
-     fie.write(t +" " + str(message.message_id) + " " + str(mes.message_id))
-     fie.close()
-
 
 @app.on_message(Filters.chat(ferrari) & Filters.edited)
 def main(client, message):
@@ -58,6 +57,7 @@ def main(client, message):
     id = str(message.message_id)
     if id in x:
       client.edit_message_text(int(m),int(x[x.index(id)+1]), "**" + message.text + "**" )
+
      
 @app.on_message(Filters.chat(bullet) & Filters.edited)
 def main(client, message):
