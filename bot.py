@@ -2,10 +2,11 @@ from pyrogram import Client, Filters
 app = Client("820706559:AAEmDj6Rn61OC7SjWx77jqnki_IO8KNqBmA",814511,"44462f0f278503255d5cc30941b617a9")
 bullet = -1001378725482
 ferrari = -1001274887387 
+k = -1001295042917
 
 @app.on_message(Filters.chat(ferrari) & ~ Filters.edited)
 def main(client, message):
- mes = client.send_message( int(k), "**" + message.text + "**" )
+ mes = client.send_message( k, "**" + message.text + "**" )
  fille = open("ids.txt","r")
  n = fille.readlines()
  fille.close()
@@ -16,7 +17,7 @@ def main(client, message):
 
 @app.on_message(Filters.chat(bullet) & ~ Filters.edited)
 def main(client, message):
- mes = client.send_message( int(k), "**" + message.text + "**" )
+ mes = client.send_message( k, "**" + message.text + "**" )
  fille = open("ids.txt","r")
  n = fille.readlines()
  fille.close()
@@ -34,7 +35,7 @@ def main(client, message):
     x = c.split()
     id = str(message.message_id)
     if id in x:
-      client.edit_message_text(int(k),int(x[x.index(id)+1]), "**" + message.text + "**" )
+      client.edit_message_text(k,int(x[x.index(id)+1]), "**" + message.text + "**" )
 
      
 @app.on_message(Filters.chat(bullet) & Filters.edited)
@@ -46,7 +47,7 @@ def main(client, message):
   x = c.split()
   id = str(message.message_id)
   if id in x:
-   client.edit_message_text(int(k),int(x[x.index(id)+1]), "**" + message.text + "**" )
+   client.edit_message_text(k , int(x[x.index(id)+1]), "**" + message.text + "**" )
      
 
 
