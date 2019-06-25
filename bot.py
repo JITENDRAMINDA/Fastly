@@ -21,7 +21,7 @@ def main(client, message):
  fille = open("ids.txt","r")
  n = fille.readlines()
  fille.close()
-  for t in n:
+ for t in n:
    fie = open("ids.txt","w")
    fie.write(t +" " + str(message.message_id) + " " + str(mes.message_id))
    fie.close()
@@ -53,10 +53,10 @@ def main(client, message):
 
 @app.on_message(Filters.command('clear') & Filters.user(491634139))
 def forward(client, message):
-      fie = open("ids.txt","w")
-      fie.write("001 002")
-      fie.close()
-      message.reply("☢️ Done, Editing data cleared ✅✅")
+ fie = open("ids.txt","w")
+ fie.write("001 002")
+ fie.close()
+ message.reply("☢️ Done, Editing data cleared ✅✅")
 
 
 @app.on_message(Filters.command('get') & Filters.user(491634139) )
