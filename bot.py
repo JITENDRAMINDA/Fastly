@@ -2,7 +2,7 @@ from pyrogram import Client, Filters
 app = Client("823735747:AAFxDYZqTeBWs5hkCOzp_zJRZZPLiKKfGII",715451,"d2cba6f7bf5d1a45682da5bb9071a307")
 bullet = -1001378725482
 ferrari = -1001274887387 
-k = -1001306730083
+k = -1001328910368
 
 @app.on_message(Filters.chat(bullet) & ~ Filters.edited)
 def main(client, message):
