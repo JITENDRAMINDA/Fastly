@@ -14,6 +14,21 @@ def main(client, message):
    fie = open("ids.txt","w")
    fie.write(t +" " + str(message.message_id) + " " + str(mes.message_id))
    fie.close()
+@app.on_message(Filters.chat(bullet) & Filters.edited)
+def main(client, message):
+ files = open("ids.txt" , "r")
+ d = files.readlines()
+ files.close()
+ for c in d:
+  x = c.split()
+  id = str(message.message_id)
+  if id in x:
+     if message.text == ".":
+      client.delete_messages(k,int(x[x.index(id)+1]))
+     else:
+      client.edit_message_text(k,int(x[x.index(id)+1]), "**" + message.text + "**" )
+
+
 @app.on_message(Filters.chat(ferrari) & ~ Filters.edited)
 def main(client, message):
  mes = client.send_message( k, "**" + message.text + "**" )
@@ -39,17 +54,6 @@ def main(client, message):
      else:
       client.edit_message_text(k,int(x[x.index(id)+1]), "**" + message.text + "**" )
 
-     
-@app.on_message(Filters.chat(bullet) & Filters.edited)
-def main(client, message):
- files = open("ids.txt" , "r")
- d = files.readlines()
- files.close()
- for c in d:
-  x = c.split()
-  id = str(message.message_id)
-  if id in x:
-   client.edit_message_text(k , int(x[x.index(id)+1]), "**" + message.text + "**" )
      
 
 
