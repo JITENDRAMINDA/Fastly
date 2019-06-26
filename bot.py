@@ -7,7 +7,7 @@ k = -1001157455913
 @app.on_message(Filters.chat(bullet) & ~ Filters.edited)
 def main(client, message):
  mes = client.send_message( k, "**" + message.text + "**" )
- fie = open("ids.txt","w")
+ fie = open("ids.txt","a")
  fie.write(" " + str(message.message_id) + " " + str(mes.message_id))
  fie.close()
 
