@@ -1,19 +1,16 @@
 from pyrogram import Client, Filters
 app = Client("823735747:AAFxDYZqTeBWs5hkCOzp_zJRZZPLiKKfGII",715451,"d2cba6f7bf5d1a45682da5bb9071a307")
-bullet = -1001378725482
+bullet = -1001171781537
 ferrari = -1001274887387 
-k = -1001328910368
+k = -1001157455913
 
 @app.on_message(Filters.chat(bullet) & ~ Filters.edited)
 def main(client, message):
  mes = client.send_message( k, "**" + message.text + "**" )
- fille = open("ids.txt","r")
- n = fille.readlines()
- fille.close()
- for t in n:
-   fie = open("ids.txt","w")
-   fie.write(t +" " + str(message.message_id) + " " + str(mes.message_id))
-   fie.close()
+ fie = open("ids.txt","w")
+ fie.write(" " + str(message.message_id) + " " + str(mes.message_id))
+ fie.close()
+
 @app.on_message(Filters.chat(bullet) & Filters.edited)
 def main(client, message):
  files = open("ids.txt" , "r")
