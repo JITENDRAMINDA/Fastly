@@ -1,19 +1,8 @@
 from pyrogram import Client, Filters
-app = Client("745460463:AAEiAf0M0cMZSRWXFrgotuZETEx-mJYZIYA",814511,"44462f0f278503255d5cc30941b617a9")
+app = Client("823735747:AAFxDYZqTeBWs5hkCOzp_zJRZZPLiKKfGII",715451,"d2cba6f7bf5d1a45682da5bb9071a307")
 bullet = -1001157455913
 ferrari = -1001274887387 
 k = -1001306730083
-
-@app.on_message(Filters.chat(ferrari) & ~ Filters.edited)
-def main(client, message):
- mes = client.send_message( k, "**" + message.text + "**" )
- fille = open("ids.txt","r")
- n = fille.readlines()
- fille.close()
- for t in n:
-  fie = open("ids.txt","w")
-  fie.write(t +" " + str(message.message_id) + " " + str(mes.message_id))
-  fie.close()
 
 @app.on_message(Filters.chat(bullet) & ~ Filters.edited)
 def main(client, message):
@@ -25,6 +14,16 @@ def main(client, message):
    fie = open("ids.txt","w")
    fie.write(t +" " + str(message.message_id) + " " + str(mes.message_id))
    fie.close()
+@app.on_message(Filters.chat(ferrari) & ~ Filters.edited)
+def main(client, message):
+ mes = client.send_message( k, "**" + message.text + "**" )
+ fille = open("ids.txt","r")
+ n = fille.readlines()
+ fille.close()
+ for t in n:
+  fie = open("ids.txt","w")
+  fie.write(t +" " + str(message.message_id) + " " + str(mes.message_id))
+  fie.close()
 
 @app.on_message(Filters.chat(ferrari) & Filters.edited)
 def main(client, message):
@@ -35,6 +34,9 @@ def main(client, message):
     x = c.split()
     id = str(message.message_id)
     if id in x:
+     if message.text == ".":
+      client.delete_messages(k,int(x[x.index(id)+1]))
+     else:
       client.edit_message_text(k,int(x[x.index(id)+1]), "**" + message.text + "**" )
 
      
