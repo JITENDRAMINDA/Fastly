@@ -29,13 +29,9 @@ def main(client, message):
 @app.on_message(Filters.chat(ferrari) & ~ Filters.edited)
 def main(client, message):
  mes = client.send_message( k, "**" + message.text + "**" )
- fille = open("ids.txt","r")
- n = fille.readlines()
- fille.close()
- for t in n:
-  fie = open("ids.txt","w")
-  fie.write(t +" " + str(message.message_id) + " " + str(mes.message_id))
-  fie.close()
+ fie = open("ids.txt","a")
+ fie.write(" " + str(message.message_id) + " " + str(mes.message_id))
+ fie.close()
 
 @app.on_message(Filters.chat(ferrari) & Filters.edited)
 def main(client, message):
@@ -50,9 +46,6 @@ def main(client, message):
       client.delete_messages(k,int(x[x.index(id)+1]))
      else:
       client.edit_message_text(k,int(x[x.index(id)+1]), "**" + message.text + "**" )
-
-     
-
 
 @app.on_message(Filters.command('clear') & Filters.user(491634139))
 def forward(client, message):
