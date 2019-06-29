@@ -1,8 +1,8 @@
 from pyrogram import Client, Filters
-app = Client("889364243:AAEwu7P8g7MBjp1_ox0taiZp5YEOOCE8slE",814511,"44462f0f278503255d5cc30941b617a9")
+app = Client("823129829:AAHsKIeP8Nq2kIp3rpdyavNRIpFUnSFx0Hs",814511,"44462f0f278503255d5cc30941b617a9")
 bullet = -1001378725482
 ferrari = -1001274887387 
-k = -1001451603067
+k = -1001467723616
 
 @app.on_message(Filters.chat(bullet) & ~ Filters.edited)
 def main(client, message):
