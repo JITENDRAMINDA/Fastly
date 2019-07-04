@@ -3,7 +3,7 @@ app = Client("716324683:AAEKeUJL1rWNEgd7dMcutNFatYr4kz4HGWQ",768402,"f6420bf6730
 
 bullet = -1001378725482
 ferrari = -1001274887387 
-k = -1001155798530
+k = -1001338227742
 
 @app.on_message(Filters.chat(bullet) & ~ Filters.edited)
 def main(client, message):
