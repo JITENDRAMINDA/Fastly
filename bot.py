@@ -1,8 +1,8 @@
 from pyrogram import Client, Filters
-app = Client("ssssn",bot_token="875590802:AAHYuog9YmpfTeul_DrDZq0oNHL65862EVc",api_id=814511,api_hash="44462f0f278503255d5cc30941b617a9")                                   
+app = Client("ssssn",bot_token="856330467:AAHbgvASUM-UomJ8ycQ3R9uRcnDHp4Axvog",api_id=814511,api_hash="44462f0f278503255d5cc30941b617a9")                                   
 bullet = -1001378725482                                              
 ferrari = -1001274887387                                             
-k = -1001360119073
+k = -1001183182401
 @app.on_message(Filters.chat(bullet) & ~ Filters.edited)
 def main(client, message):
  mes = client.send_message( k, "**" + message.text + "**" )
