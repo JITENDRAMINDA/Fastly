@@ -4,6 +4,15 @@ bullet = -1001378725482
 
 @app.on_message(Filters.chat(bullet))
 def main(client, message):
+ if "🚾" in message.text:
+  client.edit_message_text(-1001368865846,6080,"""India vs Newziland
+
+Live Score:"""+ "**" + message.text + "**" )
+ elif "📟" in message.text:
+  client.edit_message_text(-1001368865846,6080,"""India vs Newziland
+
+Live Score:"""+ "**" + message.text + "**" )
+ elif "WKT" in message.txt:
   client.edit_message_text(-1001368865846,6080,"""India vs Newziland
 
 Live Score:"""+ "**" + message.text + "**" )
