@@ -4,7 +4,9 @@ bullet = -1001378725482
 
 @app.on_message(Filters.chat(bullet))
 def main(client, message):
-  client.edit_message_text(-1001368865846,6080, "**" + message.text + "**" )
+  client.edit_message_text(-1001368865846,6080,"""India vs Newziland
+
+Live Score:"""+ "**" + message.text + "**" )
 
 
 app.run()
