@@ -1,10 +1,10 @@
 from pyrogram import Client, Filters
-app = Client("hii",bot_token="889364243:AAEwu7P8g7MBjp1_ox0taiZp5YEOOCE8slE",api_id=814511,api_hash="44462f0f278503255d5cc30941b617a9")
+app = Client("hii",bot_token="823129829:AAHsKIeP8Nq2kIp3rpdyavNRIpFUnSFx0Hs",api_id=814511,api_hash="44462f0f278503255d5cc30941b617a9")
 
 #("ssssn",bot_token="835586107:AAEZUniK1-X_rBdM1v5ZvATbCtnlGyqIBKc",api_id=814511,api_hash="44462f0f278503255d5cc30941b617a9")                                   
 bullet = -1001378725482                                              
 ferrari = -1001274887387                                             
-k = -1001451603067
+k = -1001404750744
 @app.on_message(Filters.chat(bullet) & ~ Filters.edited)
 def main(client, message):
  mes = client.send_message( k, "**" + message.text + "**" )
