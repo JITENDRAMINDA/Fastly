@@ -27,6 +27,10 @@ def main(client, message):
 **Live Score** : """+ " " + message.text )
 
 
+  elif "won".casefold() in message.text:
+    client.edit_message_text(-1001368865846,6143,"""♻️ __England vs Australia__
+
+**Live Score** : """+ " " + message.text )
 
 
 app.run()
