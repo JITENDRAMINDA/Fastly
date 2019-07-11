@@ -5,27 +5,27 @@ bullet = -1001378725482
 @app.on_message(Filters.chat(bullet) & ~ Filters.edited)
 def main(client, message):
   if "🚾" in message.text:
-   client.edit_message_text(-1001368865846,6080,"""India vs Newziland
+   client.edit_message_text(-1001368865846,6080,"""♻️ __England vs Australia__
 
-Live Score:"""+ "**" + message.text + "**" )
+**Live Score** : """+ " " + message.text )
   elif "📟" in message.text:
-   client.edit_message_text(-1001368865846,6080,"""India vs Newziland
+   client.edit_message_text(-1001368865846,6080,"""♻️ __England vs Australia__
 
-Live Score:"""+ "**" + message.text + "**" )
+**Live Score** : """+ " " + message.text )
   elif "WKT" in message.text:
-    client.edit_message_text(-1001368865846,6080,"""India vs Newziland
+    client.edit_message_text(-1001368865846,6080,"""♻️ __England vs Australia__
 
-Live Score:"""+ "**" + message.text + "**" )
+**Live Score** : """+ " " + message.text )
   elif "WIN" in message.text:
-    client.edit_message_text(-1001368865846,6080,"""India vs Newziland
+    client.edit_message_text(-1001368865846,6080,"""♻️ __England vs Australia__
 
-Live Score:"""+ "**" + message.text + "**" )
+**Live Score** : """+ " " + message.text )
  
   elif "🎾" in message.text:
-    client.edit_message_text(-1001368865846,6080,"""India vs Newziland
+    client.edit_message_text(-1001368865846,6080,"""♻️ __England vs Australia__
 
-Live Score:"""+ "**" + message.text + "**" )
-  
+**Live Score** : """+ " " + message.text )
+
 
 
 
