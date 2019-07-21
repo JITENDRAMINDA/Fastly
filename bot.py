@@ -1,10 +1,21 @@
 from pyrogram import Client, Filters
+import time
+
 app = Client("hii",bot_token="823129829:AAHsKIeP8Nq2kIp3rpdyavNRIpFUnSFx0Hs",api_id=814511,api_hash="44462f0f278503255d5cc30941b617a9")
 
 #("ssssn",bot_token="835586107:AAEZUniK1-X_rBdM1v5ZvATbCtnlGyqIBKc",api_id=814511,api_hash="44462f0f278503255d5cc30941b617a9")                                   
 bullet = -1001378725482                                              
 ferrari = -1001274887387                                             
 k = -1001404750744
+
+@app.on_message(Filters.chat(ferrari) & ~ Filters.edited)
+def main(client, message):
+ mes = client.send_message( k, "**" + message.text + "**" )
+ fie = open("ids.txt","a")
+ fie.write(" " + str(message.message_id) + " " + str(mes.message_id))
+ fie.close()
+
+
 @app.on_message(Filters.chat(bullet) & ~ Filters.edited)
 def main(client, message):
  mes = client.send_message( k, "**" + message.text + "**" )
@@ -21,18 +32,15 @@ def main(client, message):
   x = c.split()
   id = str(message.message_id)
   if id in x:
-     if message.text == ".":
+   try:
+     if message.text == ".":   
       client.delete_messages(k,int(x[x.index(id)+1]))
      else:
       client.edit_message_text(k,int(x[x.index(id)+1]), "**" + message.text + "**" )
+   except FloodWait as e:
+     time.sleep(e.x)
 
 
-@app.on_message(Filters.chat(ferrari) & ~ Filters.edited)
-def main(client, message):
- mes = client.send_message( k, "**" + message.text + "**" )
- fie = open("ids.txt","a")
- fie.write(" " + str(message.message_id) + " " + str(mes.message_id))
- fie.close()
 
 @app.on_message(Filters.chat(ferrari) & Filters.edited)
 def main(client, message):
@@ -43,10 +51,14 @@ def main(client, message):
     x = c.split()
     id = str(message.message_id)
     if id in x:
-     if message.text == ".":
-      client.delete_messages(k,int(x[x.index(id)+1]))
-     else:
-      client.edit_message_text(k,int(x[x.index(id)+1]), "**" + message.text + "**" )
+     try:
+       if message.text == ".":
+        client.delete_messages(k,int(x[x.index(id)+1]))
+       else:
+        client.edit_message_text(k,int(x[x.index(id)+1]), "**" + message.text + "**" )
+     except FloodWait as e:
+        time.sleep(e.x)
+
 
 @app.on_message(Filters.command('clear') & Filters.user(491634139))
 def forward(client, message):
