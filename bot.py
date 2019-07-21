@@ -1,12 +1,12 @@
 from pyrogram import Client, Filters
 import time
 
-app = Client("hiiw",bot_token="749259812:AAHFjMPdCIkTRVPZcA6a9gtcgEwHpbSZ9ZM",api_id=814511,api_hash="44462f0f278503255d5cc30941b617a9")
+app = Client("hiiw",bot_token="835604104:AAHMQwEQ2t5QRV-96o-mQJFoAw2WaBugkZM",api_id=814511,api_hash="44462f0f278503255d5cc30941b617a9")
 
 #("ssssn",bot_token="835586107:AAEZUniK1-X_rBdM1v5ZvATbCtnlGyqIBKc",api_id=814511,api_hash="44462f0f278503255d5cc30941b617a9")                                   
 bullet = -1001378725482                                              
 ferrari = -1001274887387                                             
-k = -1001398222202
+k = -100 
 
 @app.on_message(Filters.chat(ferrari) & ~ Filters.edited)
 def main(client, message):
