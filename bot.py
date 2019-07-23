@@ -1,7 +1,7 @@
 from pyrogram import Client, Filters
 import time
 
-app = Client("hiiw",bot_token="835604104:AAHMQwEQ2t5QRV-96o-mQJFoAw2WaBugkZM",api_id=814511,api_hash="44462f0f278503255d5cc30941b617a9")
+app = "823828943:AAGnTlIeUYKB231mF4NHqnTHKSE28g5mQQo",api_id=814511,api_hash="44462f0f278503255d5cc30941b617a9")
 
 #("ssssn",bot_token="835586107:AAEZUniK1-X_rBdM1v5ZvATbCtnlGyqIBKc",api_id=814511,api_hash="44462f0f278503255d5cc30941b617a9")                                   
 bullet = -1001378725482                                              
