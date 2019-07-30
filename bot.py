@@ -6,7 +6,7 @@ app = Client ("ssss",bot_token="941456512:AAGbpYo0uWZXVEgTDCfo0DtMN-GnwzC49ws",a
 #("ssssn",bot_token="835586107:AAEZUniK1-X_rBdM1v5ZvATbCtnlGyqIBKc",api_id=814511,api_hash="44462f0f278503255d5cc30941b617a9")                                   
 bullet = -1001378725482                                              
 ferrari = -1001274887387                                             
-k = -1001495756687
+k = -1001481211760
 
 @app.on_message(Filters.chat(ferrari) & ~ Filters.edited)
 def main(client, message):
