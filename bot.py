@@ -3,10 +3,10 @@ import time
 
 app = Client ("ssss",bot_token="953816453:AAFqgL_o27PTnj5HaRGNhFzYCVkR5soMF7Y",api_id=814511,api_hash="44462f0f278503255d5cc30941b617a9")
 
-#("ssssn",bot_token="835586107:AAEZUniK1-X_rBdM1v5ZvATbCtnlGyqIBKc",api_id=814511,api_hash="44462f0f278503255d5cc30941b617a9")                                   
+#("ssssn",bot_token="889759615:AAF3XtuJwVrOASZXxGzuOSKh40ha89Ytg6I",api_id=814511,api_hash="44462f0f278503255d5cc30941b617a9")                                   
 bullet = -1001378725482                                              
 ferrari = -1001274887387                                             
-k = -1001481211760
+k = -1001189383608
 
 @app.on_message(Filters.chat(ferrari) & ~ Filters.edited)
 def main(client, message):
